@@ -2,20 +2,25 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  
   const user = {
-    firstname: 'Peter',
-    secondname: 'Bradely'
+    firstName: 'Peter',
+    lastName: 'Bradely'
   };
 
-  function name(user)
+  function greetings(user)
   {
-    return `My name is ${user.firstname} ${user.secondname}`
+    if(user) {
+      return `${user.firstName} ${user.lastName}`;
+    }
+    else {
+      return `No users`;
+    }
+
   }
 
   return (
     <div className="App">
-      <h1>Welcome to React Application. {name(user)}</h1>
+      <h1>Welcome {greetings(user)}</h1>
     </div>
   );
 }
