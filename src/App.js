@@ -1,14 +1,24 @@
 import React from 'react';
 import './App.css';
 
-function App(props) {
+class App extends React.Component
+{
+  constructor(props){
+    super(props);
+    this.name = props.name;
+    this.age = props.age;
+    this.address = props.address;
+  }
 
-  return (
-    <div className="App">
-      <h3>Name: {props.name}</h3>
-      <h3>Age: {props.age}</h3>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h3>Name: {this.name}</h3>
+        <h3>Age: {this.age}</h3>
+        <h4>Address: {this.address}</h4>
+      </div>
+    );
+  }
 }
 
 export default App;
