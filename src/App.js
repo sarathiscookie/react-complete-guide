@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.css';
 
-class App extends React.Component
-{
-  constructor(props){
-    super(props);
-    this.name = props.name;
-    this.age = props.age;
-    this.address = props.address;
+function App(){
+
+  function Welcome(props) 
+  {
+    return <div>
+      <h2>Name: {props.name}</h2>
+      <h4>Age: {props.age}</h4>
+      </div>;
   }
 
-  render() {
-    return (
-      <div className="App">
-        <h3>Name: {this.name}</h3>
-        <h3>Age: {this.age}</h3>
-        <h4>Address: {this.address}</h4>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Welcome name="Peter Bradely" age="24"/>
+      <Welcome name="Declan Oconner" age="45"/>
+      <Welcome name="Maria Oconner" age="40"/>
+    </div>
+  );
 }
 
 export default App;
