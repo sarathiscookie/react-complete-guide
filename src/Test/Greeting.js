@@ -7,8 +7,8 @@ class Greeting extends React.Component {
       <div>
       <h3><u>Inline if with Logical && Operator</u></h3>
       {
-        this.props.loginStatus === 'true' && 
-        <h3>User is online. Welcome to React JS</h3>
+          this.props.countOfMsg.length > 0 &&
+          <h3>User recieved messages count is {this.props.countOfMsg.length}.</h3>
       }
       </div>
     );
