@@ -9,7 +9,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-       <Greeting countOfMsg = {messages}/>
+       
       </div>
     );
   }
