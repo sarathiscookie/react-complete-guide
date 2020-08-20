@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Job from './Test/Job';
 
 class App extends React.Component {
 
