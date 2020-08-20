@@ -8,6 +8,12 @@ class App extends React.Component {
     status: 'active',
   }
 
+  switchButtonHandler = () => {
+    this.setState({
+      status: "deactive"
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,6 +25,7 @@ class App extends React.Component {
       }
 
       <h3> Inline If-Else with Conditional Operator (Example 2)</h3>
+      <button onClick = {this.switchButtonHandler}>Switch Button</button>
       <Greeting status = {this.state.status === 'active' ? 'Status is active' : 'Status is deactive'}/>
       </div>
     );
